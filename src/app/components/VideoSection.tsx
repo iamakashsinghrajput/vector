@@ -11,27 +11,28 @@ export function VideoSection() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative w-full bg-black py-20 lg:py-32">
+    <section className="relative w-full bg-black py-8 lg:py-12 -mb-[300px]">
       <div className="absolute inset-0 h-full w-full bg-[radial-gradient(#2d2d2d_1px,transparent_1px)] [background-size:16px_16px]"></div>
-      <div className="relative mx-auto w-full max-w-5xl px-4">
+      
+      <div className="relative mx-auto w-full max-w-3xl px-4">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true }}
-          className="group relative cursor-pointer rounded-2xl border border-white/10 bg-neutral-900/60 shadow-2xl shadow-black/40"
+          className="group relative cursor-pointer rounded-xl border border-white/10 bg-neutral-900/60 shadow-xl shadow-black/40"
           onClick={() => setIsOpen(true)}
         >
           <Image
-            src="/video-preview.png"
+            src="/images/astronaut-vector.png"
             alt="Video preview of an email client UI"
             width={1920}
             height={1080}
-            className="rounded-2xl opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+            className="rounded-xl opacity-70 transition-opacity duration-300 group-hover:opacity-100"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
-              <Play className="h-10 w-10 text-white" fill="white" />
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
+              <Play className="h-8 w-8 text-white" fill="white" />
             </div>
           </div>
         </motion.div>
@@ -74,6 +75,6 @@ export function VideoSection() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </section>
   );
 }

@@ -18,6 +18,7 @@ import { ComparisonSection } from "./ComparisonSection";
 import { UseCasesSection } from "./UseCasesSection";
 import { FeaturesSection } from "./FeaturesSection";
 import { FaqSection } from "./FaqSection";
+import {Footer} from "./Footer";
 
 export function NavbarDemo() {
   const navItems = [
@@ -98,6 +99,7 @@ export function NavbarDemo() {
       <FeaturesSection/>
       <NewPricingSection/>
       <FaqSection/>
+      <Footer/>
     </div>
   );
 }

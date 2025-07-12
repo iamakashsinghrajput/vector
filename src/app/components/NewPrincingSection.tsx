@@ -1,40 +1,48 @@
 "use client";
 
 import React from "react";
-import { motion, easeInOut } from "framer-motion";
+import { motion } from "framer-motion";
 import { PricingCard, PricingCardProps } from "./PricingCard";
 
 const plans: PricingCardProps[] = [
   {
-    planName: "Monthly",
-    price: "$19",
+    planName: "Common",
+    price: "$0",
     priceDetail: "/monthly",
-    description: "For those who prefer a flexible, subscription-based model.",
+    description: "For individuals and teams getting started with VectorCop.",
     features: [
-      "1,000 vectorizations per month",
-      "Updates during subscription",
-      "Standard email support",
-      "Use on 1 device",
+      { text: "Unlimited users" },
+      { text: "Unlimited Huly Objects" },
+      { text: "10GB Storage per Workspace", info: "Per Workspace" },
+      { text: "10GB Video/Audio Traffic", info: "Per Workspace" },
+      { text: "AI — TBD" },
     ],
     isHighlighted: false,
-    buttonText: "Start Free Trial",
+    buttonText: "Start Free",
+    videoSrc: "/common_final.mp4",
   },
   {
-    planName: "Lifetime Deal",
+    planName: "Rare",
     price: "$39",
     priceDetail: "/lifetime",
-    description: "For individuals and teams who want to own their tools forever.",
+    description: "For individuals and teams getting started with VectorCop.",
     features: [
-      "Unlimited vectorizations",
-      "All future updates included",
-      "Priority customer support",
-      "Use on 3 devices",
-      "One-time payment",
+      { text: "Unlimited users" },
+      { text: "Unlimited VectorCop Objects" },
+      { text: "10GB Storage per Workspace", info: "Per Workspace" },
+      { text: "10GB Video/Audio Traffic", info: "Per Workspace" },
+      { text: "Unlimited vectorizations" },
+      { text: "Priority customer support" },
+      { text: "Access to all future updates" },
+      { text: "Dedicated Discord channel access" },
     ],
-    isHighlighted: true,
-    buttonText: "Get Lifetime Access",
+    isHighlighted: false,
+    buttonText: "Start Free",
+    videoSrc: "/rare_final.mp4",
   },
 ];
+
+import { easeInOut } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0 },
