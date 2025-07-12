@@ -11,8 +11,9 @@ import {
   Youtube,
   Slack,
   Dribbble,
-  IconProps,
 } from "lucide-react";
+
+type IconProps = React.SVGProps<SVGSVGElement>;
 
 const socialLinks = [
   { href: "#", icon: Twitter },
@@ -37,6 +38,8 @@ const PixelHeartIcon = (props: IconProps) => (
   </svg>
 );
 
+import { easeInOut } from "framer-motion";
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -50,7 +53,7 @@ const itemVariants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.5, ease: "easeInOut" },
+    transition: { duration: 0.5, ease: easeInOut },
   },
 };
 
